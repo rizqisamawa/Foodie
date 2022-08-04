@@ -6,22 +6,22 @@ import styled from "styled-components";
 function Category() {
   return (
     <List>
-      <div>
+      <NavLink to={"/cuisine/Italian"}>
         <FaPizzaSlice />
         <h4>Italian</h4>
-      </div>
-      <div>
+      </NavLink>
+      <NavLink to={"/cuisine/American"}>
         <FaHamburger />
         <h4>American</h4>
-      </div>
-      <div>
+      </NavLink>
+      <NavLink to={"/cuisine/Thailand"}>
         <GiNoodles />
         <h4>Thailand</h4>
-      </div>
-      <div>
+      </NavLink>
+      <NavLink to={"/cuisine/Japanese"}>
         <GiChopsticks />
         <h4>Japanese</h4>
-      </div>
+      </NavLink>
     </List>
   );
 }
@@ -30,6 +30,7 @@ const List = styled.div`
   display: flex;
   justify-content: center;
   margin: 2rem 0rem;
+  text-align: center;
 `;
 
 export default Category;
