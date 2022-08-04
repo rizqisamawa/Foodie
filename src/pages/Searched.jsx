@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 const API_KEY = "cd91ed83ad0e47feb6f7ddc2c1a16e75";
 
@@ -24,8 +24,10 @@ function Searched() {
       {searchedRecipes.map((item) => {
         return (
           <Card key={item.id}>
-            <img src={item.images} alt={item.title} />
-            <h4>{item.title}</h4>
+            <Link to={"/recipe/" + item.id}>
+              <img src={item.images} alt={item.title} />
+              <h4>{item.title}</h4>
+            </Link>
           </Card>
         );
       })}
